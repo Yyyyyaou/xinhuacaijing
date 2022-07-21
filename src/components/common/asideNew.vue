@@ -39,6 +39,11 @@ export default {
           icon: "el-icon-s-shop",
           title: "Home Page",
         },
+        {
+          path: "/search",
+          icon: "el-icon-s-shop",
+          title: "Search",
+        },
       ],
     };
   },

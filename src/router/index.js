@@ -21,6 +21,21 @@ const routes = [
         name: "homePage",
         component: () => import('@/views/homePage/homePage'),
       },
+      {
+        path: '/search',
+        name: "search",
+        component: () => import('@/views/search/search'),
+      },
+      {
+        path: '/articleDetail',
+        name: 'articleDetail',
+        component: () => import('@/views/searchDetail/articleDetail.vue'),
+      },
+      {
+        path: '/companyDetail',
+        name: 'companyDetail',
+        component: () => import('@/views/searchDetail/companyDetail.vue'),
+      },
     ],
   },
   {
