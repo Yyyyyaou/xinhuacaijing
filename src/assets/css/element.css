@@ -131,7 +131,7 @@
 
 /*搜索页enterprise选择框样式*/
 .regional .el-input__inner{
-    height: 30px;
+    height: 30px !important;
     line-height: 30px;
 }
 .regional .el-input__icon{
