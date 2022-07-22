@@ -97,7 +97,7 @@ export default {
 }
 .numGroupLine {
   width: 2px;
-  height: 100%;
+  height: 65px;
   background: #409eff;
   margin: 0 10px 0 20px;
 }
@@ -116,7 +116,6 @@ export default {
   font-size: 12px;
 }
 .numGroupNum p {
-  max-width: 140px;
   font-size: 12px;
   text-align: left;
 }

@@ -13,12 +13,12 @@ const routes = [
   {
     path: '/homeNew',
     name: 'homeNew',
-    redirect: "/homePage",
+    redirect: "/ChinaEnterprise",
     component: () => import(/* webpackChunkName: "Login" */ '@/views/homeNew/homeNew.vue'),
     children: [
       {
-        path: '/homePage',
-        name: "homePage",
+        path: '/ChinaEnterprise',
+        name: "ChinaEnterprise",
         component: () => import('@/views/homePage/homePage'),
       },
     ],
