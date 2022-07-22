@@ -8,6 +8,7 @@
                         v-model="selectedDate"
                         type="daterange"
                         range-separator="-"
+                        format="yyyy/MM/dd"
                         start-placeholder="yyyy/mm/dd"
                         end-placeholder="yyyy/mm/dd">
                 </el-date-picker>

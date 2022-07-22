@@ -9,6 +9,9 @@
 .companyDetail .titleCard .el-card__body{
     padding: 0;
 }
+.companyDetail .el-main{
+    padding: 20px 0 20px 20px;
+}
 .companyDetail .aside .el-card__body{
     padding: 0;
 }
@@ -187,4 +190,75 @@
 }
 .relatedArticle .selectBox .sourceSelect .el-input__icon{
     line-height: 26px;
+}
+
+/*公司详情页*/
+.analysis .companyAnalysisTop .el-button--primary.is-plain{
+    color: #000;
+    background: #ffffff;
+    border-color: rgba(47, 142, 255, 1);
+    width: 70px;
+    height: 25px;
+}
+.analysis .companyAnalysisTop .on .el-button--primary.is-plain{
+    background: rgba(47, 142, 255, 1);
+    color: #ffffff;
+    margin-right: 4px;
+}
+.analysis .companyAnalysisTop .el-button--mini{
+    border-radius: 10px;
+}
+.analysis .companyAnalysisTop .el-button--mini{
+    padding: 0;
+}
+.analysis .companyAnalysisTop .el-range-editor.el-input__inner{
+    padding: 0;
+}
+.analysis .companyAnalysisTop .el-input__inner, .publicOpinion .companyAnalysisTop .el-input__inner{
+    height: 20px;
+    line-height: 20px;
+}
+.analysis .companyAnalysisTop .el-date-editor--daterange.el-input__inner, .publicOpinion .companyAnalysisTop .el-date-editor--daterange.el-input__inner{
+    width: 240px;
+    margin-right: 10px;
+}
+.analysis .companyAnalysisTop .el-date-editor .el-range__icon, .publicOpinion .companyAnalysisTop .el-date-editor .el-range__icon{
+    line-height: 20px;
+    margin-left: 5px;
+}
+.analysis .companyAnalysisTop .el-date-editor .el-range-separator, .publicOpinion .companyAnalysisTop .el-date-editor .el-range-separator{
+    line-height: 18px;
+}
+.analysis .companyAnalysisTop .el-date-editor .el-range-input, .publicOpinion .companyAnalysisTop .el-date-editor .el-range-input{
+    font-size: 12px;
+}
+.publicOpinion .companyAnalysisTop .el-range-editor.el-input__inner{
+    padding: 0;
+}
+
+/*common*/
+.regionVolume, .publicOpinion, .analysis, .attention, .distribution, .emotionTrend, .ranking{
+    border-bottom: 8px solid #F2F2F2;
+    margin-bottom: 20px;
+}
+.companyAnalysisTop .analysisTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.companyAnalysisTop .analysisTitle i{
+    color: #2f8eff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.companyAnalysisTop .title{
+    font-size: 14px;
+    color: #7F7F7F;
+    line-height: 26px;
+    font-weight: bold;
+}
+.companyAnalysisTop .describe{
+    font-size: 12px;
+    color: #D7D7D7;
 }

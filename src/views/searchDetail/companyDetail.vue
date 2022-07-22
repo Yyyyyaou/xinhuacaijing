@@ -41,16 +41,32 @@
                     <company-info :item="item"></company-info>
                 </el-card>
 
-                <el-tabs v-model="activeName" @tab-click="handleClick"  type="border-card" class="tabs">
+                <el-tabs v-model="activeName" type="border-card" class="tabs">
                     <el-tab-pane label=" Overseas public opinion data analysis" name="0">
                         <el-card>
-                            <analysis></analysis>
-                            <attention></attention>
-                            <emotion-distribution></emotion-distribution>
-                            <emotion-trend></emotion-trend>
-                            <public-opinion></public-opinion>
-                            <region-volume></region-volume>
-                            <ranking></ranking>
+                            <div class="overseasPublic">
+                                <div class="content">
+                                    <analysis id="item0"></analysis>
+                                    <attention id="item1"></attention>
+                                    <emotion-distribution id="item2"></emotion-distribution>
+                                    <emotion-trend id="item3"></emotion-trend>
+                                    <public-opinion id="item4"></public-opinion>
+                                    <region-volume id="item5"></region-volume>
+                                    <ranking id="item6"></ranking>
+                                </div>
+                                <div class="timeLine">
+                                    <el-timeline>
+                                        <el-timeline-item
+                                            v-for="(activity, index) in activities"
+                                            :key="index"
+                                            :color="index === activeItem ? 'rgba(47, 142, 255, 1)' : ''"
+                                            :size="index === activeItem ? 'large' : 'normal'"
+                                            @click.native="toHere(index)">
+                                            {{activity.content}}
+                                        </el-timeline-item>
+                                    </el-timeline>
+                                </div>
+                            </div>
                         </el-card>
 
                     </el-tab-pane>
@@ -124,20 +140,44 @@
                     pic: require('@/assets/img/jingdong.png'),
                     title: 'Jingdong Co.,LTD',
                 },
-                activeName: '0'
+                activeName: '0',
+                activities: [
+                  {
+                      content: 'Enterprise manuscript trend analysis',
+                  }, {
+                      content: 'Trend of User\'s Attention',
+                  }, {
+                      content: 'Emotion Distribution',
+                  }, {
+                      content: 'Emotion Trend',
+                  }, {
+                      content: 'Public Opinion Activation',
+                  }, {
+                      content: 'Region Volume Analysis',
+                  }, {
+                      content: 'Brand Popularity Ranking',
+                  }
+                ],
+                activeItem: 0
             }
         },
         components:{CompanyInfo, RelatedArticle, Analysis, Attention, EmotionDistribution, EmotionTrend, PublicOpinion, RegionVolume, Ranking},
-        watch: {
-            filterText(val) {
 
-            }
-        },
         methods: {
             showDetail(i){
                 console.log(i);
             },
-            handleClick(){}
+            toHere(index){
+                this.activeItem = index;
+                console.log(index);
+                let id = "#item" + index; // id
+                // 给对应dom滚动到对应锚点，使之出现在视图中
+                document.querySelector(id).scrollIntoView({
+                    behavior: "smooth", // 定义过渡动画 instant立刻跳过去 smooth平滑过渡过去
+                    block: "end", // 定义垂直滚动方向的对齐 start顶部（尽可能）  center中间（尽可能）  end（底部）
+                    inline: "center", // 定义水平滚动方向的对齐
+                });
+            }
         }
     }
 </script>
@@ -197,5 +237,16 @@
     .companyDetail .info{
         margin-bottom: 20px;
     }
+  .companyDetail .timeLine{
+      /*width: 160px;*/
+  }
+  .companyDetail .overseasPublic{
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+  }
+  .companyDetail .overseasPublic .content{
+    margin-right: 20px;
+  }
 
 </style>
