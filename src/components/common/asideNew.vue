@@ -35,9 +35,9 @@ export default {
     return {
       asideMenu: [
         {
-          path: "/homePage",
+          path: "/ChinaEnterprise",
           icon: "el-icon-s-shop",
-          title: "Home Page",
+          title: "China Enterprise",
         },
         {
           path: "/search",

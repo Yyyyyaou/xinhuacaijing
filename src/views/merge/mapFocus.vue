@@ -10,11 +10,7 @@
       </div>
       <div
         id="mapDiv"
-        style="
-          height: 590px;
-          margin: 20px 30px 0;
-          position: relative;
-        "
+        style="height: 590px; margin: 20px 30px 0; position: relative"
       >
         <div class="mapTop">
           <div
@@ -636,7 +632,7 @@ export default {
       //创建图片对象
       var icon = new T.Icon({
         iconUrl: "http://api.tianditu.gov.cn/img/map/markerA.png",
-        iconSize: new T.Point(50, 50),
+        iconSize: new T.Point(35, 35),
         iconAnchor: new T.Point(10, 25),
       });
 
@@ -698,7 +694,7 @@ export default {
     document.body.appendChild(script);
     setTimeout(() => {
       this.load(); //加载地图
-    }, 500);
+    }, 1500);
   },
 };
 </script>
@@ -719,7 +715,7 @@ export default {
 .targeta {
   display: flex;
   height: 36px;
-  padding: 0 30px;
+  padding: 0 10px;
 }
 .seatar {
   font-weight: 700;
@@ -758,7 +754,7 @@ export default {
 }
 .focusDetails {
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 10px;
 }
 .focusDetails > li {
   border-top: 1px solid #aaa;
@@ -788,7 +784,7 @@ export default {
 }
 .focusnames li > div span {
   border-radius: 15px;
-  padding: 0 15px;
+  padding: 0 10px;
   height: 20px;
 }
 .focusnamesPink {
@@ -919,12 +915,24 @@ div/deep/.el-dialog__header {
   margin-left: 40px;
 }
 div/deep/.tdt-marker-pane .redicon:hover {
+  width: 50px !important;
+  height: 50px !important;
+  margin-left: -19px !important;
+  margin-top: -33px !important;
   content: url(../../assets/img/circleouterred.png);
 }
 div/deep/.tdt-marker-pane .blueicon:hover {
+  width: 50px !important;
+  height: 50px !important;
+  margin-left: -19px !important;
+  margin-top: -33px !important;
   content: url(../../assets/img/circleouterblue.png);
 }
 div/deep/.tdt-marker-pane .yellowicon:hover {
+  width: 50px !important;
+  height: 50px !important;
+  margin-left: -19px !important;
+  margin-top: -33px !important;
   content: url(../../assets/img/circleouteryellow.png);
 }
 .mapBottom {
@@ -965,7 +973,7 @@ div/deep/.tdt-marker-pane .yellowicon:hover {
 .mapTop {
   position: absolute;
   z-index: 999;
-  height: 36px;
+  height: 3rem;
   width: 100%;
   background: rgba(255, 255, 255, 0.698039215686274);
   display: flex;
@@ -983,7 +991,6 @@ div/deep/.tdt-marker-pane .yellowicon:hover {
 .mapTop span {
   font-family: "Arial Normal", "Arial";
   text-align: left;
-  max-width: 830px;
   font-size: 12px;
   color: #555555;
   line-height: 15px;

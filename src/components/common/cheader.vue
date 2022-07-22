@@ -1,6 +1,7 @@
 <template>
   <div class="header">
-    <div class="headerL">
+    <img src="../../assets/img/cheader.jpg" alt="">
+    <!-- <div class="headerL">
       <img src="../../assets/img/u81.png" alt="logo" />
       <h4>“一带一路”信息服务平台后台管理系统</h4>
     </div>
@@ -47,7 +48,7 @@
         <el-button @click="cancel">取消</el-button>
         <el-button type="primary" @click="submit">确定</el-button>
       </div>
-    </el-dialog>
+    </el-dialog> -->
   </div>
 </template>
 
