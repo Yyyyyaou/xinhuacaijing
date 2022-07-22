@@ -30,6 +30,9 @@ export default {
   overflow: hidden;
   background: #f2f6f9;
 }
+.el-header {
+  padding: 0;
+}
 .el-aside {
   height: 100vh;
   overflow: hidden;
