@@ -694,7 +694,7 @@ export default {
     document.body.appendChild(script);
     setTimeout(() => {
       this.load(); //加载地图
-    }, 1500);
+    }, 500);
   },
 };
 </script>
