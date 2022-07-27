@@ -505,6 +505,7 @@ export default {
         },
       ],
       IndusorEnter: "Indus",
+      timer: {},
     };
   },
   methods: {
@@ -591,6 +592,7 @@ export default {
       const init = new Promise((resolve, reject) => {
         if (window.T) {
           console.log("地图初始化成功");
+          clearInterval(this.timer);
           resolve(window.T);
           reject("error");
         }
@@ -692,9 +694,12 @@ export default {
     script.src =
       "http://api.tianditu.gov.cn/api?v=4.0&tk=4ec12c59e31a51b0f6e5159000bef507";
     document.body.appendChild(script);
-    setTimeout(() => {
-      this.load(); //加载地图
-    }, 500);
+    // setTimeout(() => {
+    //   this.load(); //加载地图
+    // }, 10000);
+    this.timer = window.setInterval(() => {
+      setTimeout(this.load(), 0);
+    }, 1000);
   },
 };
 </script>
